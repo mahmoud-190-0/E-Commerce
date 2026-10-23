@@ -19,6 +19,7 @@ import CartPage from "./Pages/CartPage/CartPage.jsx";
 import ProductSection from "./Components/ProductSection/ProductSection.jsx";
 import ProductDetails from "./Pages/ProductDetails/ProductDetails.jsx";
 import SubcategoryProducts from "./Pages/SubcategoryProductsPage/SubcategoryProductsPage.jsx";
+import OrdersPage from "./Pages/OrdersPage/OrdersPage.jsx";
 function App() {
   return (
     <>
@@ -40,6 +41,7 @@ function App() {
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/Wishlist" element={<WishlistPage />} />
         <Route path="/cart" element={<CartPage />} />
+        <Route path="/orders" element={<OrdersPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/profile" element={<ProfilePage />} />
