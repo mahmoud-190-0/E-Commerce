@@ -1,0 +1,412 @@
+/* ============================================================
+   FONTS
+============================================================ */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+
+/* ============================================================
+   LIGHT MODE — DEFAULT THEME
+============================================================ */
+:root {
+  color-scheme: light;
+
+  /* ============================================================
+     PRIMARY — Acid Mint
+     ============================================================ */
+  --primary-color: #b7ff72;
+  --primary-hover: #a5f55c;
+  --primary-active: #8ed93d;
+  --primary-light: #efffe0;
+  --primary-light-hover: #e0ffc7;
+
+  /* ============================================================
+     BUTTON TEXT — Dark text on mint backgrounds
+     ============================================================ */
+  --btn-primary-text: #142014;
+
+  /* ============================================================
+     SECONDARY — Deep Wine (Contrast)
+     ============================================================ */
+  --secondary-color: #4c1030;
+  --secondary-hover: #3a0a24;
+  --accent-color: #6b1a45;
+  --accent-hover: #521235;
+
+  /* ============================================================
+     BACKGROUNDS
+     ============================================================ */
+  --bg-color: #f4f7f0;
+  --bg-secondary: #ffffff;
+  --card-color: #ffffff;
+  --card-hover: #f0fdf4;
+  --surface-color: #ffffff;
+  --input-bg: #ffffff;
+
+  /* ============================================================
+     RATINGS
+     ============================================================ */
+  --rating-color: #f59e0b;
+  --rating-hover: #d97706;
+
+  /* ============================================================
+     TEXT — High Contrast Light Mode
+     ============================================================ */
+  --text-color: #142014;
+  --text-muted: #374637;
+  --text-light: #526252;
+  --btn-primary-text: #142014;
+
+  /* ============================================================
+     BORDERS — Better Visibility
+     ============================================================ */
+  --border-color: #c2d0bb;
+  --border-hover: #8fa982;
+  --border-focus: #527f32;
+
+  /* ============================================================
+     SUCCESS
+     ============================================================ */
+  --success-color: #15803d;
+  --success-hover: #166534;
+  --success-bg: #dcfce7;
+  --success-border: #86efac;
+
+  /* ============================================================
+     DANGER
+     ============================================================ */
+  --danger-color: #c6284b;
+  --danger-hover: #a61e3c;
+  --danger-bg: #fce7ed;
+  --danger-border: #f2a7b9;
+
+  /* ============================================================
+     WARNING — Amber
+     ============================================================ */
+  --warning-color: #b45309;
+  --warning-hover: #92400e;
+  --warning-bg: #fffbeb;
+  --warning-border: #fcd34d;
+
+  /* ============================================================
+     INFO — Blue
+     ============================================================ */
+  --info-color: #1d4ed8;
+  --info-hover: #1e40af;
+  --info-bg: #eff6ff;
+  --info-border: #bfdbfe;
+
+  /* ============================================================
+     PRODUCT BADGES
+     ============================================================ */
+  --discount-color: #c6284b;
+  --sale-badge-bg: #8ed93d;
+  --sale-badge-text: #142014;
+  --out-of-stock-color: #374637;
+
+  /* ============================================================
+     UI — Radius & Transitions
+     ============================================================ */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  --transition: 0.25s ease;
+
+  /* ============================================================
+     SHADOWS — Warm neutral tones
+     ============================================================ */
+  --shadow-sm: 0 1px 3px rgb(20 32 20 / 8%);
+  --shadow-md: 0 4px 12px rgb(20 32 20 / 10%);
+  --shadow-lg: 0 10px 25px rgb(20 32 20 / 15%);
+
+  /* ============================================================
+     FOCUS RING — Acid Mint glow
+     ============================================================ */
+  --focus-ring: 0 0 0 3px rgb(142 217 61 / 35%);
+
+  /* ============================================================
+     LAYERS (Z-Index)
+     ============================================================ */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 1000;
+  --z-modal: 1010;
+  --z-popover: 1020;
+  --z-tooltip: 1030;
+}
+/* ============================================================
+   DARK MODE — ACID MINT ON DEEP FOREST
+   Activate:
+   document.documentElement.dataset.theme = "dark"
+============================================================ */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Primary — Acid Mint (Vibrant for dark UI) */
+  --primary-color: #8ed93d;
+  --primary-hover: #b7ff72;
+  --primary-active: #78ba36;
+  --primary-light: #1e3312;
+  --primary-light-hover: #2a4a1a;
+
+  /* Secondary — Light Mint */
+  --secondary-color: #d0f5b0;
+  --secondary-hover: #e0ffc7;
+  --accent-color: #b7ff72;
+  --accent-hover: #d0f5b0;
+
+  /* Backgrounds */
+  --bg-color: #0a120a; /* Deeper black-green for contrast */
+  --bg-secondary: #121c12;
+  --card-color: #182418; /* Lighter than bg-secondary */
+  --card-hover: #223322;
+  --surface-color: #182418;
+  --input-bg: #121c12;
+
+  /* Text */
+  --text-color: #f0fdf4;
+  --text-muted: #a3c4a3; /* Slightly cooler for readability */
+  --text-light: #6e8f6e;
+  --text-inverse: #0a120a;
+
+  /* Borders */
+  --border-color: #2e4a2e;
+  --border-hover: #4a754a; /* Brighter on hover */
+  --border-focus: #8ed93d;
+
+  /* Success */
+  --success-color: #6ee7a0;
+  --success-hover: #a7f3c0;
+  --success-bg: #153323;
+  --success-border: #276749;
+
+  /* Danger */
+  --danger-color: #ff91a8;
+  --danger-hover: #ffb1c1;
+  --danger-bg: #481b2b;
+  --danger-border: #8e3450;
+
+  /* Warning */
+  --warning-color: #f4b5c6;
+  --warning-hover: #ffd4df;
+  --warning-bg: #482033;
+  --warning-border: #79334f;
+
+  /* Info */
+  --info-color: #93c5fd;
+  --info-hover: #bfdbfe;
+  --info-bg: #1e3a8a;
+  --info-border: #3b82f6;
+
+  /* Product Badges */
+  --discount-color: #ff9bad;
+  --sale-badge-bg: #8ed93d;
+  --sale-badge-text: #0a120a;
+  --out-of-stock-color: #6e8f6e;
+
+  /* Shadows — Increased depth for dark mode */
+  --shadow-sm: 0 2px 5px rgb(0 0 0 / 30%);
+  --shadow-md: 0 5px 15px rgb(0 0 0 / 40%);
+  --shadow-lg: 0 12px 28px rgb(0 0 0 / 50%);
+
+  /* Focus */
+  --focus-ring: 0 0 0 3px rgb(142 217 61 / 35%);
+}
+/* ============================================================
+   RESET
+============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: var(--secondary-color) var(--bg-color);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+/* React application */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form controls */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+input,
+select,
+textarea {
+  color: var(--text-color);
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-light);
+}
+
+button {
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition),
+    transform var(--transition);
+}
+
+/* button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+} */
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+/* Text selection */
+::selection {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+/* Keyboard accessibility */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 3px;
+}
+
+/* ============================================================
+   REUSABLE THEME COMPONENTS
+============================================================ */
+.product-card,
+.category-card,
+.cart-card,
+.profile-card {
+  color: var(--text-color);
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+
+  transition:
+    background-color var(--transition),
+    color var(--transition),
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+.product-card:hover,
+.category-card:hover {
+  background-color: var(--card-hover);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary {
+  color: var(--btn-primary-text);
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: var(--radius-sm);
+}
+
+.btn-primary:hover:not(:disabled) {
+  color: var(--btn-primary-text);
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  color: var(--text-color);
+  background-color: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background-color: var(--card-hover);
+  border-color: var(--border-hover);
+}
+
+.alert-success {
+  color: var(--success-color);
+  background-color: var(--success-bg);
+  border: 1px solid var(--success-border);
+}
+
+.alert-error {
+  color: var(--danger-color);
+  background-color: var(--danger-bg);
+  border: 1px solid var(--danger-border);
+}
+
+/* ============================================================
+   SCROLLBAR
+============================================================ */
+::-webkit-scrollbar {
+  width: 4px !important;
+  height: 8px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border: 2px solid var(--bg-color);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* ============================================================
+   REDUCED MOTION ACCESSIBILITY
+============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

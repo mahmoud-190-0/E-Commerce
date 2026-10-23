@@ -1,0 +1,173 @@
+:root {
+  color-scheme: light;
+
+  /* Primary — Rose */
+  --primary-color: #d65a7d;
+  --primary-hover: #c7476b;
+  --primary-active: #a33757;
+  --primary-light: #fce9ee;
+  --primary-light-hover: #f9d5e0;
+
+  /* Secondary — Raspberry */
+  --secondary-color: #a33757;
+  --secondary-hover: #852e4e;
+  --accent-color: #852e4e;
+  --accent-hover: #6d2140;
+
+  /* Backgrounds */
+  --bg-color: #f2e4e8;
+  --bg-secondary: #fceef2;
+  --card-color: #e4c4c4;
+  --card-hover: #fff1f5;
+  --surface-color: #ffffff;
+  --input-bg: #ffffff;
+
+  /* ratings */
+  --rating-color: #f59e0b;
+  --rating-hover: #d97706;
+
+  /* Text */
+  --text-color: #4c1030;
+  --text-muted: #852e4e;
+  --text-light: #a65d77;
+  --text-inverse: #ffffff;
+
+  /* Borders */
+  --border-color: #f0d5df;
+  --border-hover: #e7b6c8;
+  --border-focus: #d65a7d;
+
+  /* Success */
+  --success-color: #15803d;
+  --success-hover: #166534;
+  --success-bg: #dcfce7;
+  --success-border: #86efac;
+
+  /* Danger */
+  --danger-color: #c6284b;
+  --danger-hover: #a61e3c;
+  --danger-bg: #fce7ed;
+  --danger-border: #f2a7b9;
+
+  /* Warning */
+  --warning-color: #a33757;
+  --warning-hover: #852e4e;
+  --warning-bg: #fce9ee;
+  --warning-border: #e7b6c8;
+
+  /* Info */
+  --info-color: #852e4e;
+  --info-hover: #6d2140;
+  --info-bg: #f3e5f5;
+  --info-border: #d8b4e2;
+
+  /* Product Badges */
+  --discount-color: #c6284b;
+  --sale-badge-bg: #d65a7d;
+  --sale-badge-text: #ffffff;
+  --out-of-stock-color: #a65d77;
+
+  /* UI */
+  --radius-sm: 6px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+
+  --transition: 0.25s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 5px rgb(76 16 48 / 5%);
+  --shadow-md: 0 5px 15px rgb(76 16 48 / 8%);
+  --shadow-lg: 0 12px 28px rgb(76 16 48 / 12%);
+
+  /* Focus */
+  --focus-ring: 0 0 0 3px rgb(214 90 125 / 25%);
+
+  /* Layers */
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-fixed: 300;
+  --z-modal-backdrop: 1000;
+  --z-modal: 1010;
+  --z-popover: 1020;
+  --z-tooltip: 1030;
+}
+
+/* ============================================================
+   DARK MODE — DEEP WINE & SOFT ROSE
+   Activate:
+   document.documentElement.dataset.theme = "dark"
+============================================================ */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  /* Primary — Soft Rose */
+  --primary-color: #f08aa5;
+  --primary-hover: #f6a8bc;
+  --primary-active: #d65a7d;
+  --primary-light: #512039;
+  --primary-light-hover: #642747;
+
+  /* Secondary — Light Raspberry */
+  --secondary-color: #e8a0b5;
+  --secondary-hover: #f5c0d0;
+  --accent-color: #f0b5c5;
+  --accent-hover: #ffe1e9;
+
+  /* Backgrounds */
+  --bg-color: #200b17;
+  --bg-secondary: #2d1020;
+  --card-color: #351326;
+  --card-hover: #43182d;
+  --surface-color: #351326;
+  --input-bg: #2d1020;
+
+  /* Text */
+  --text-color: #fff1f5;
+  --text-muted: #e8b7c7;
+  --text-light: #c98ba1;
+  --text-inverse: #200b17;
+
+  /* Borders */
+  --border-color: #59253d;
+  --border-hover: #79334f;
+  --border-focus: #f08aa5;
+
+  /* Success */
+  --success-color: #6ee7a0;
+  --success-hover: #a7f3c0;
+  --success-bg: #153323;
+  --success-border: #276749;
+
+  /* Danger */
+  --danger-color: #ff91a8;
+  --danger-hover: #ffb1c1;
+  --danger-bg: #481b2b;
+  --danger-border: #8e3450;
+
+  /* Warning */
+  --warning-color: #f4b5c6;
+  --warning-hover: #ffd4df;
+  --warning-bg: #482033;
+  --warning-border: #79334f;
+
+  /* Info */
+  --info-color: #e7b8ff;
+  --info-hover: #f0d5ff;
+  --info-bg: #35203f;
+  --info-border: #684477;
+
+  /* Product Badges */
+  --discount-color: #ff9bad;
+  --sale-badge-bg: #f08aa5;
+  --sale-badge-text: #200b17;
+  --out-of-stock-color: #c98ba1;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 5px rgb(0 0 0 / 25%);
+  --shadow-md: 0 5px 15px rgb(0 0 0 / 30%);
+  --shadow-lg: 0 12px 28px rgb(0 0 0 / 40%);
+
+  /* Focus */
+  --focus-ring: 0 0 0 3px rgb(240 138 165 / 30%);
+}

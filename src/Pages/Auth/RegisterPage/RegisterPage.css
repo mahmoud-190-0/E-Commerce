@@ -1,0 +1,362 @@
+/* =========================================
+   Base Auth Page Styles (Works for Login & Register)
+   ========================================= */
+.register-page,
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px; /* Added more top/bottom padding for the register page */
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.auth-wrapper {
+  width: 100%;
+  max-width: 440px;
+}
+
+/* Use .auth-card as well for the register page */
+.auth-card,
+.auth-card1 {
+  background: var(--card-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 40px 32px;
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   Header & Text
+   ========================================= */
+.form-panel h1 {
+  margin: 0 0 8px 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 28px 0;
+  font-size: 15px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* =========================================
+   Alerts (Success & Error)
+   ========================================= */
+.login-success,
+.login-error,
+.register-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.login-success {
+  background-color: var(--success-bg);
+  color: var(--success-color);
+  border: 1px solid var(--success-color);
+}
+
+.login-error,
+.register-error {
+  background-color: var(--danger-bg);
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+}
+
+/* =========================================
+   Form Inputs
+   ========================================= */
+.input-group {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  color: var(--text-color);
+  background-color: var(--input-bg);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  outline: none;
+  transition: all var(--transition);
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-focus);
+  box-shadow: var(--focus-ring);
+}
+
+/* Floating Label Logic */
+.input-group label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: var(--text-light);
+  pointer-events: none;
+  transition: all var(--transition);
+  background-color: transparent;
+  padding: 0 4px;
+}
+
+/* Move label up when input is focused or has text */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+  top: 0;
+  font-size: 13px;
+  color: var(--primary-color);
+  background-color: var(--card-color);
+}
+
+/* Error State */
+.input-group.has-error input {
+  border-color: var(--danger-color);
+  background-color: var(--danger-bg);
+}
+
+.input-group.has-error input:focus {
+  box-shadow: 0 0 0 3px rgb(240 113 113 / 0.15);
+}
+
+.input-group.has-error label {
+  color: var(--danger-color);
+}
+
+.field-error {
+  display: block;
+  font-size: 13px;
+  color: var(--danger-color);
+  margin-top: -18px;
+  margin-bottom: 16px;
+  padding-left: 4px;
+}
+
+/* Success checkmark icon */
+.input-status--success {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--success-color);
+  display: flex;
+  align-items: center;
+}
+
+/* Optional Label (Phone field) */
+.optional {
+  font-size: 12px;
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+/* =========================================
+   Password Toggle Button
+   ========================================= */
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  transition:
+    background-color var(--transition),
+    color var(--transition);
+}
+
+.password-toggle:hover {
+  background-color: var(--surface-color);
+  color: var(--text-color);
+}
+
+/* =========================================
+   Password Strength Meter
+   ========================================= */
+.password-strength {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: -14px;
+  margin-bottom: 20px;
+}
+
+.strength-bar {
+  flex: 1;
+  height: 6px;
+  background-color: var(--border-color);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.strength-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition:
+    width 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.strength-label {
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 70px;
+  text-align: right;
+}
+
+/* =========================================
+   Options (Remember Me & Forgot Password)
+   ========================================= */
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.options a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.options a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================
+   Submit Button
+   ========================================= */
+.main-btn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--primary-color);
+  color: var(--text-inverse);
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    transform 0.1s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.main-btn:hover:not(:disabled) {
+  background-color: var(--primary-hover);
+}
+
+.main-btn:active:not(:disabled) {
+  transform: scale(0.98);
+  background-color: var(--primary-active);
+}
+
+.main-btn:disabled {
+  background-color: var(--out-of-stock-color);
+  color: var(--text-light);
+  cursor: not-allowed;
+}
+
+/* Spinner */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--text-inverse);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   Switch Area (Login/Register Link)
+   ========================================= */
+.switch-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 32px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.switch-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--surface-color);
+  color: var(--primary-color);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all var(--transition);
+}
+
+.switch-circle:hover {
+  background-color: var(--primary-color);
+  color: var(--text-inverse);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
