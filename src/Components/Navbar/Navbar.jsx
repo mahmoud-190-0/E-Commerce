@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import "./navbar.css";
+import "./Navbar.css";
 import {
   Heart,
   ShoppingCart,
@@ -136,6 +136,16 @@ const Navbar = () => {
                   Offers
                 </Link>
               </li>
+              {isAuthenticated && (
+                <li>
+                  <Link
+                    to="/orders"
+                    className={`nav-link ${location.pathname.startsWith("/orders") ? "active" : ""}`}
+                    onClick={closeMenu}>
+                    My Orders
+                  </Link>
+                </li>
+              )}
             </ul>
           </div>
 
